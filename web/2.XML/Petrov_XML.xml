@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?> 
-<!DOCTYPE mydoc PUBLIC "-" "http://kodaktor.ru/x/unsafe_6e02b">
-<profile>
-	<students>
-		<goals>
-		</goals>
-	</students>
-
-</profile>
+<!DOCTYPE gossml PUBLIC "meresnes" 
+"http://kodaktor.ru/x/unsave_480f4">
+<gossml>
+  
+</gossml>
