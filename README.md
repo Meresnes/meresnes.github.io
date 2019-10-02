@@ -1,11 +1,11 @@
 # meresnes.github.io
-# About me
+# About me:
 
 # My name is Petrov Roman
 
 # Languages:
- Python 
- C#
+ -Python 
+ -C#
 # My social networks:
  [Vk](https://vk.com/ramzess7878)
 # My photo:
