@@ -1,7 +1,7 @@
 # meresnes.github.io
 ## About me:
 
-# My name is Petrov Roman
+# "My name is Petrov Roman"
 
 ## Languages:
 #### -Python  
