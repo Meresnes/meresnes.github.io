@@ -16,7 +16,6 @@
 ## My photo:
 !['Ph'](https://github.com/meresnes/meresnes.github.io/raw/master/My.png)
 
-<<<<<<< HEAD
 ## Lr
 ```python
 
@@ -30,6 +29,5 @@ print(lst1)
 print('Сумма данных чисел =', sum(lst1))
 
 ```
-=======
->>>>>>> 56b922d1ec942009db89bc991f215208c5125f47
+
  
