@@ -41,15 +41,17 @@ def main():
     ttl = turtle.Turtle()
     ttl.hideturtle()
 
+    x = int(input("Введите X:"))
+    y = int(input("Введите Y:"))
 
     while True:
 
         time.sleep(0.2)
         ttl.clear()
 
-        draw_triangle_1(ttl,'black',50,50,50)
-        draw_triangle_2(ttl,'red',50,50,50)
-        draw_triangle_3(ttl,'blue',50,50,50)
+        draw_triangle_1(ttl,'black',x,x,y)
+        draw_triangle_2(ttl,'red',x,x,y)
+        draw_triangle_3(ttl,'blue',x,x,y)
 
         turtle.update()
 
