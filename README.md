@@ -52,3 +52,8 @@ print('Сумма данных чисел =', sum(lst1))
 ```
 
  
+## Web labs  
+## node: 
+node install:
+!['Screen'](https://github.com/meresnes/meresnes.github.io/raw/master/web/node/node_screen.png)
+
