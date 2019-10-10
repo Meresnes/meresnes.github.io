@@ -54,6 +54,8 @@ print('Сумма данных чисел =', sum(lst1))
  
 ## Prog-3 labs:
 [labs](https://github.com/meresnes/meresnes.github.io/raw/master/prog_3)
+## Comp graphic:  
+## [Lr](https://github.com/meresnes/meresnes.github.io/raw/master/Graphic/Labs)
 ## Web labs  
 ## 1)node: 
 node install:
