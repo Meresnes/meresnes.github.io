@@ -15,7 +15,6 @@ def main ():
 if __name__ == "__main__":
       main()
       
-=======
 def foo(x,y):
 
     return float(x)+float(y)
