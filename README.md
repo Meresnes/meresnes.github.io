@@ -56,7 +56,7 @@ print('Сумма данных чисел =', sum(lst1))
 
 
 ## Программирование на python:
-[labs](https://github.com/meresnes/meresnes.github.io/raw/master/prog_3)
+[Labs](https://github.com/meresnes/meresnes.github.io/raw/master/prog_3)
 ## Компьютерная графика:  
 ## [Lr](https://github.com/meresnes/meresnes.github.io/raw/master/Graphic/Labs)
 ## Веб-проектирование: 
