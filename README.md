@@ -52,11 +52,11 @@ print('Сумма данных чисел =', sum(lst1))
 ```
 
  
-## Prog-3 labs:
+## Программирование на python:
 [labs](https://github.com/meresnes/meresnes.github.io/raw/master/prog_3)
-## Comp graphic:  
+## Компьютерная графика:  
 ## [Lr](https://github.com/meresnes/meresnes.github.io/raw/master/Graphic/Labs)
-## Web labs  
+## Веб-проектирование: 
 ## 1)node: 
 node install:
 !['Screen'](https://github.com/meresnes/meresnes.github.io/raw/master/web/1_lab_node/node_screen.png)
