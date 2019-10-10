@@ -27,7 +27,7 @@
 
 
 ## My photo:
-!['Ph'](https://github.com/meresnes/meresnes.github.io/raw/master/My.png)
+!['Ph'](https://github.com/meresnes/meresnes.github.io/raw/master/Pic/My.png)
 
 
 
@@ -52,6 +52,9 @@ print('Сумма данных чисел =', sum(lst1))
 ```
 
  
+!['Lr'](https://github.com/meresnes/meresnes.github.io/raw/master/Pic/Lr.png)
+
+
 ## Программирование на python:
 [labs](https://github.com/meresnes/meresnes.github.io/raw/master/prog_3)
 ## Компьютерная графика:  
