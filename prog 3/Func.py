@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import math
 
 def geron_S(a,b,c):
@@ -22,4 +21,3 @@ def foo(x,y):
     return float(x)+float(y)
 print(foo(1,2))
 
->>>>>>> 56b922d1ec942009db89bc991f215208c5125f47
