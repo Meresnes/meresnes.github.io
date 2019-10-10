@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<!DOCTYPE portfolio PUBLIC "---" "http://kodaktor.ru/x/unsave_480f4">
+<!DOCTYPE profile PUBLIC "---" "http://kodaktor.ru/x/g_427dc">
 <profile>
-	<students>
-		<goals>
-		</goals>
-	</students>
+	<abilities>
+		<competency in="HTML" value="not great, but not terrible"/>
+        	<competency in="Python" value="better than HTML, but not perfect"/>
+        	<competency in="CSS" value="i just can`t remember selectors"/>
+        	<competency in="English" value="upper-intermediate"/>
+	</abilities>
 </profile>
