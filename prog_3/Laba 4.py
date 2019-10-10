@@ -6,8 +6,10 @@
 import math
 
 def geron_S(a,b,c):
+    
     p = 0.5*(a + b + c)
     res = math.sqrt(p*(p-a)*(p-b)*(p-c))
+
     return res
 
 def main ():
