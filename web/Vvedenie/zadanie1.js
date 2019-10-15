@@ -1,5 +1,5 @@
 //Выполнил Петров Роман
-// Ссылка на работу в kodaror.ru https://kodaktor.ru/task_func_cb551
+
 const [a1, b1, c1, a2, b2, c2] = [1, 3, 2, 9, 2, 7];
 let A, A1, A2, x, y;
   		
