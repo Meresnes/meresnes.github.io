@@ -59,5 +59,6 @@ print('Сумма данных чисел =', sum(lst1))
 [labs](https://github.com/meresnes/meresnes.github.io/raw/master/prog_3)
 ## Компьютерная графика:  
 ## [Labs](https://github.com/meresnes/meresnes.github.io/raw/master/Graphic/Labs)
-## [Веб-проектирование:](https://github.com/meresnes/meresnes.github.io/raw/master/web) 
+## Веб-проектирование:  
+## [Labs](https://github.com/meresnes/meresnes.github.io/raw/master/web) 
 
