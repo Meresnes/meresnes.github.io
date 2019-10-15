@@ -55,10 +55,10 @@ print('Сумма данных чисел =', sum(lst1))
 !['Lr'](https://github.com/meresnes/meresnes.github.io/raw/master/Pic/Lr.png)
 
 
-## Программирование на python:
-#[labs](https://github.com/meresnes/meresnes.github.io/raw/master/prog_3)
+## Программирование на python:  
+### [labs](https://github.com/meresnes/meresnes.github.io/raw/master/prog_3)
 ## Компьютерная графика:  
-# [Labs](https://github.com/meresnes/meresnes.github.io/raw/master/Graphic/Labs)
+### [Labs](https://github.com/meresnes/meresnes.github.io/raw/master/Graphic/Labs)
 ## Веб-проектирование:  
-# [Labs](https://github.com/meresnes/meresnes.github.io/raw/master/web) 
+### [Labs](https://github.com/meresnes/meresnes.github.io/raw/master/web) 
 
