@@ -6,4 +6,5 @@
 
   
 ## 2)[Xml, dtd](https://github.com/meresnes/meresnes.github.io/raw/master/web/2_lab_XML)  
-##[Ife](https://kodaktor.ru/?!=unsafe_8d256)
+
+## [IIFE](https://kodaktor.ru/?!=unsafe_8d256)
