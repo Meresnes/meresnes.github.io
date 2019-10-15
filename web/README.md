@@ -6,6 +6,10 @@
 
   
 ## [Xml, dtd](https://github.com/meresnes/meresnes.github.io/raw/master/web/2_lab_XML)  
-## [Введение Задание 1](https://github.com/meresnes/meresnes.github.io/raw/master/web/Vvedenie)
+## [Введение Задание 1](https://github.com/meresnes/meresnes.github.io/raw/master/web/Vvedenie)  
+## [Задание 2(Функции)](https://kodaktor.ru/task_func_cb551)
 
-## [IIFE](https://kodaktor.ru/?!=unsafe_8d256)
+
+## [IIFE](https://kodaktor.ru/?!=unsafe_8d256)  
+
+
