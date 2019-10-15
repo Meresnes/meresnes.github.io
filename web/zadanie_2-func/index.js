@@ -1,5 +1,5 @@
 //Выполнил Петров Роман
-// Ссылка на работу в kodaror.ru https://kodaktor.ru/task_func_cb551
+// Ссылка на работу в kodaror.ru https://kodaktor.ru/task_func_b7fc6
 function rgb(r = 255, g = 255, b = 255) {
      return `rgb(${r},${g},${b})`;
   }
