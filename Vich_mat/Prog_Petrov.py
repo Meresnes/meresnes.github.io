@@ -91,6 +91,7 @@ class find_integral_2:
 
 
 
+
     def selected_task(self, x):
         if self.c == 1:
             dx = math.sqrt(x + 2)
@@ -103,7 +104,7 @@ class find_integral_2:
     def trapeze(self,h):
 
         s = float(0)
-        x = self.a + h
+        x = self.b - self.a + h
 
         while (x <= self.b - h ):
             s += 1 / self.selected_task(x)
@@ -112,50 +113,51 @@ class find_integral_2:
         result = h *((math.cos(self.a) + math.cos(self.b)) / 2 + s)
         return result
 
-    def rectangle_right(self,h):
-
+    def rectangle_right(self,d):
+        h = (self.b - self.a)/d
         s = float(0)
         x = self.a + h
+
 
         while (x <= self.b):
             s += 1 / self.selected_task(x)
             x += h
 
         result = float(h * s)
-
         return result
 
 
     def double_recount(self):
 
         h = self.e
+
         res1 = self.trapeze((self.b-self.a)/h)
         res2 = self.trapeze((self.b-self.a)/h/2)
 
         while abs(res2-res1) > self.e:
             h /= 2
-            res1 = self.trapeze((self.b-self.a)/h)
+            res1 = self.trapeze((self.b-self.a)//h)
             res2 = self.trapeze((self.b-self.a)/h)
 
-        print('Результат = ',res2)
+        print('Результат = {:.5}  '.format(res2))
         return res2
 
     def second_algorithm(self):
+
         h_v = self.e
         h_s = h_v / 2
-
-        res1 = self.rectangle_right((self.b-self.a)/h_v)
+        res1 = self.rectangle_right(h_v)
         res2 = 0
+
         while abs(res2 - res1) > self.e:
-            res1 = self.rectangle_right((self.b-self.a)/h_v)
+            res1 = self.rectangle_right(h_v)
             h_v += h_s
             h_d = h_v / 2
-            res2 = self.rectangle_right((self.b-self.a)/h_d)
+            res2 = self.rectangle_right(h_d)
             h_v /= 2
             h_s /= 2
-        print('Результат = ', res2)
+        print('Результат = {} '.format(res2))
         return res2
-
 
 
 def method():
@@ -226,7 +228,6 @@ def choose_2(a,b,c,e):
         else:
             print("\nВы ввели не правильные данные!!!")
 
-
 def menu():
     #Меню выбора задачи
     while True:
@@ -236,7 +237,7 @@ def menu():
         print("3:(e^(-x^2))*dx")
         print("4:Выход")
 
-        c = int(input("\nВыберите задачу(1,2 или 3):"))
+        c = int(input("\nВыберите задачу:"))
 
         if c == 4:
             return False
@@ -273,13 +274,13 @@ def main():
                 a = float(input("Введите нижний предел интегрирования:"))
                 b = float(input("Введите верхний предел интегрирования:"))
                 e = float(input("Введите точность:"))
+
                 q = choose_2(a, b, c, e)
             if q != False:
                 break
 
             if (c == False):
                 break
-
 
 if __name__ == '__main__':
     main()
