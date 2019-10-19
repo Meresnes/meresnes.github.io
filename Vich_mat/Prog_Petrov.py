@@ -15,6 +15,8 @@ class find_integral:
             dx = (x - 1)
         if self.c == 3:
             dx = (math.e**((-x)**2))
+        if self.c == 4:
+            dx = (math.sin(x)**2)
         return dx
     #Метод прямоугольникво левых частей
     def rectangle_left(self):
@@ -90,15 +92,19 @@ class find_integral_2:
         self.e = e
 
 
-
-
     def selected_task(self, x):
         if self.c == 1:
             dx = math.sqrt(x + 2)
+
         if self.c == 2:
             dx = (x - 1)
+
         if self.c == 3:
             dx = (math.e ** ((-x) ** 2))
+
+        if self.c == 4:
+            dx = (math.sin(x) ** 2)
+
         return dx
 
     def trapeze(self,h):
@@ -114,10 +120,10 @@ class find_integral_2:
         return result
 
     def rectangle_right(self,d):
+
         h = (self.b - self.a)/d
         s = float(0)
         x = self.a + h
-
 
         while (x <= self.b):
             s += 1 / self.selected_task(x)
@@ -146,17 +152,20 @@ class find_integral_2:
 
         h_v = self.e
         h_s = h_v / 2
-        res1 = self.rectangle_right(h_v)
+        res1 = self.rectangle_right((self.b - self.a)/h_v)
         res2 = 0
 
         while abs(res2 - res1) > self.e:
-            res1 = self.rectangle_right(h_v)
+
+            res1 = self.rectangle_right((self.b - self.a)/h_v)
             h_v += h_s
             h_d = h_v / 2
-            res2 = self.rectangle_right(h_d)
+
+            res2 = self.rectangle_right((self.b - self.a)/h_d)
             h_v /= 2
             h_s /= 2
-        print('Результат = {} '.format(res2))
+
+        print('Результат = {:.5} '.format(res2))
         return res2
 
 
@@ -166,9 +175,10 @@ def method():
         print("\n\nВыберите метод решения")
         print("1: Метод с постоянным шагом")
         print("2: Метод с переменным шагом")
-
+        print("3: Выход")
+        
         z = int(input(">>>"))
-        if (z == 1) | (z == 2):
+        if (z == 1) | (z == 2)| (z == 3):
             break
         else:
             print("\nВы ввели не правильные данные!!!")
@@ -211,7 +221,7 @@ def choose_2(a,b,c,e):
         print("\n\nВыберите метод решения")
         print("1: Первый алгоритм")
         print("2: Второй алгоритм")
-        print("4:Выход")
+        print("3: Назад")
 
         abs = find_integral_2(a, b, c, e)
         z = int(input(">>>"))
@@ -235,17 +245,18 @@ def menu():
         print("\n1: dx/√(x+2)")
         print("2: dx/x-1")
         print("3:(e^(-x^2))*dx")
-        print("4:Выход")
+        print("4:(dx/(sin^2 x))")
+        print("5: Назад")
 
         c = int(input("\nВыберите задачу:"))
 
-        if c == 4:
+        if c == 5:
             return False
             break
-        if ((c == 1)|(c == 2)|(c == 3)):
+        if ((c == 1)|(c == 2)|(c == 3)|(c == 4)):
             return c
             break
-        if ((c != 1) & (c != 2) & (c != 3) & (c != 4)):
+        if ((c != 1) & (c != 2) & (c != 3) & (c != 4)& (c != 5)):
             print("\nВы ввели не правильные данные!!!")
 
     return c
@@ -267,7 +278,7 @@ def main():
                     break
 
             if (c == False):
-                break
+                pass
         if z == 2:
             c = menu()
             if (c != False):
@@ -280,7 +291,9 @@ def main():
                 break
 
             if (c == False):
-                break
+                pass
+        if z == 3:
+            break
 
 if __name__ == '__main__':
     main()
