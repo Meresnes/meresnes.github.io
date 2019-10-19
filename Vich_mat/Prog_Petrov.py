@@ -237,7 +237,7 @@ def choose_2(a,b,c,e):
             break
         else:
             print("\nВы ввели не правильные данные!!!")
-
+    return z
 def menu():
     #Меню выбора задачи
     while True:
@@ -268,17 +268,18 @@ def main():
     while True:
         z = method()
 
+        if z == 3:
+            break
+
         if z == 1:
             c = menu()
             if (c != False):
                 a = float(input("Введите нижний предел интегрирования:"))
                 b = float(input("Введите верхний предел интегрирования:"))
                 q = choose(a, b, c)
-                if q != False:
-                    break
+                
 
-            if (c == False):
-                pass
+
         if z == 2:
             c = menu()
             if (c != False):
@@ -287,13 +288,11 @@ def main():
                 e = float(input("Введите точность:"))
 
                 q = choose_2(a, b, c, e)
-            if q != False:
-                break
-
+                
             if (c == False):
                 pass
-        if z == 3:
-            break
+
+
 
 if __name__ == '__main__':
     main()
