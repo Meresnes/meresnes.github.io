@@ -24,7 +24,7 @@ class find_integral:
         s = float(0)
         h = ((self.b - self.a) / n)
         x = self.a
-        print('Шаг = {}'.format(h))
+
 
         while (x <= self.b - h):
             s += 1 / (self.selected_task(x))
@@ -39,7 +39,7 @@ class find_integral:
         s = float(0)
         h = ((self.b - self.a) / n)
         x = self.a + h
-        print('Шаг = {}'.format(h))
+
 
         while (x <= self.b):
             s += 1 / self.selected_task(x)
@@ -54,7 +54,7 @@ class find_integral:
         s = float(0)
         h = ((self.b - self.a) / n)
         x = self.a + h
-        print('Шаг = {}'.format(h))
+
 
         while (x <= self.b - h ):
             s += 1 / self.selected_task(x)
@@ -71,7 +71,7 @@ class find_integral:
         x = self.a + h
         s1 = 0
         s2 = 0
-        print('Шаг = {}'.format(h))
+
 
         while (x <= self.b - h ):
             s1 += 1 / self.selected_task(x)
@@ -110,14 +110,15 @@ class find_integral_2:
     def trapeze(self,h):
 
         s = float(0)
-        x = self.b - self.a + h
+        x = self.a + h
+
 
         while (x <= self.b - h ):
-            s += 1 / self.selected_task(x)
+            s += (1 / self.selected_task(x))
             x += h
 
-        result = h *((math.cos(self.a) + math.cos(self.b)) / 2 + s)
-        return result
+        s += h *((math.cos(self.a) + math.cos(self.b)) / 2 )
+        return s
 
     def rectangle_right(self,d):
 
@@ -142,10 +143,10 @@ class find_integral_2:
 
         while abs(res2-res1) > self.e:
             h /= 2
-            res1 = self.trapeze((self.b-self.a)//h)
+            res1 = self.trapeze((self.b-self.a)/h)
             res2 = self.trapeze((self.b-self.a)/h)
 
-        print('Результат = {:.5}  '.format(res2))
+        print('Результат = {:.5} '.format(res2/10))
         return res2
 
     def second_algorithm(self):
@@ -165,7 +166,7 @@ class find_integral_2:
             h_v /= 2
             h_s /= 2
 
-        print('Результат = {:.5} '.format(res2))
+        print('Результат = {:.5}'.format(res2))
         return res2
 
 
