@@ -8,6 +8,6 @@
 ## [Xml, dtd](https://github.com/meresnes/meresnes.github.io/raw/master/web/2_lab_XML)  
 ## [Задание 1 Введение ](https://github.com/meresnes/meresnes.github.io/raw/master/web/Vvedenie)  
 ## [Задание 2 (Функции)](https://github.com/meresnes/meresnes.github.io/raw/master/web/zadanie_2_func)  
-## [()](https://kodaktor.ru/?!=unsafe_8d256)  
+## [IIFE](https://kodaktor.ru/?!=unsafe_8d256)  
 
 
