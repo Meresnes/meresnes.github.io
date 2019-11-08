@@ -1,65 +1,51 @@
 import turtle
 import time
 from tkinter import *
-
-def draw_triangle_1(ttl,color,size,x,y):
-
-    ttl.color(str(color))
-
-    ttl.penup()
-    ttl.setpos(x, y)
-    ttl.pendown()
-
-    ttl.goto(x + size/2, y+size)
-
-
-def draw_triangle_2(ttl,color,size,x,y):
-
-    ttl.color(str(color))
-
-    ttl.penup()
-    ttl.setpos(x+size/2, y+size)
-    ttl.pendown()
-
-    ttl.goto(x + size, y)
-
-def draw_triangle_3(ttl,color,size,x,y):
-
-    ttl.color(str(color))
-
-    ttl.penup()
-    ttl.setpos(x, y)
-    ttl.pendown()
-
-    ttl.goto(x + size, y)
-
-
-
-def Draw(x,y,z):
-
-    turtle.tracer(0, 0)
-    turtle.hideturtle()
-
-    ttl = turtle.Turtle()
-    ttl.hideturtle()
-    while True:
-        time.sleep(0.2)
-        ttl.clear()
-
-        draw_triangle_1(ttl, 'black', z, x, y)
-        draw_triangle_2(ttl, 'red', z, x, y)
-        draw_triangle_3(ttl, 'blue', z, x, y)
-
-        turtle.update()
-
-
-
-
+import matplotlib.pyplot as plt
+import numpy as np
 
 root = Tk()
 root.geometry("1200x900")
 root.title('График')
 
+def draw_graph(A,B,C,xmin,xmax,ymin, ymax):
+    x = 3
+    y = A*x^2 + B*x + C
+    fig, ax = plt.subplots()
+
+    ax.plot(x, y, color="blue", label="голубая линия")
+
+    plt.plot(x, y, 'r--')
+    plt.xlim((xmin, xmax))
+    plt.ylim((ymin, ymax))
+    plt.show()
+
+
+
+def Enter_coords():
+
+    a = EntryA.get()
+    a = float(a)
+
+    b = EntryB.get()
+    b = float(a)
+
+    c = EntryC.get()
+    c = float(c)
+
+    x_min = Entry_x_min.get()
+    x_min = float(x_min)
+
+    y_min = Entry_y_min.get()
+    y_min = float(y_min)
+
+    x_max = Entry_x_max.get()
+    x_max = float(x_max)
+
+    y_max = Entry_y_max.get()
+    y_max = float(y_max)
+
+    draw_graph(a,b,c,xmin,xmax,ymin, ymax)
 
 Label(root, text='Enter A:').pack()
 EntryA = Entry(root, width=10, font='Arial 16')
@@ -90,7 +76,7 @@ Entry_y_max = Entry(root, width=10, font='Arial 16')
 Entry_y_max.pack()
 
 but = Button(root, text='Отрисовать')
-but = Button(root, text='Отрисовать',command = Draw)
+but = Button(root, text='Отрисовать',command = Enter_coords)
 but.pack()
 
 root.mainloop()
