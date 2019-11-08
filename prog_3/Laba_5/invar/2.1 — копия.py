@@ -36,6 +36,12 @@ def log2(*args):
           print(w+sp*2+str(a1[i])+sp*2+w+sp*2+str(b1[i])+sp*2+w+sp*2+str(c1[i])+sp*2+w)
           print('-'*18)
 
-        
-log2(a1,b1,c1)
-log2(a,b)
+i = int(input('Введите количество аргуменов (2 или 3):'))
+if i == 2:
+    log2(a,b)
+if i == 3:
+   log2(a1,b1,c1)
+if (i != 2) & (i != 3):
+    print('Вы ввели неправильные значения!')
+
+
