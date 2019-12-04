@@ -9,7 +9,6 @@
 ИВТ 2 курс группа 1.1
 """
 x = input('Введите значения:').split()
-print(sorted(x))
 b = []
 unique = []
 
@@ -28,4 +27,4 @@ for i in x:
 for i in a:
     if a[i] == 1:
         unique.append(i)
-print(c)
+print('Список с уникальными значениями:',unique)
