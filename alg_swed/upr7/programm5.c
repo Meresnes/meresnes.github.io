@@ -5,23 +5,11 @@
 #define n 10
 //граница интервала из списка чисел
 #define k 10
-//сортировка вставками
-void insert_sort(int *array,int len){
-    for(int i = 1; i < len; i++){
-        int z = i;
-        while((z > 0) && (array[z-1] > array[z])){
-            int b = array[z-1];
-            array[z-1] = array[z];
-            array[z] = b;
-            z = z - 1;
-        }
-    }
-}
-
+//быстрая сортировка
 void quickSort(int *array,int left,int right){
-  int pivot; // разрешающий элемент
-  int l_hold = left; //левая граница
-  int r_hold = right; // правая граница
+  int pivot; 
+  int l_hold = left;
+  int r_hold = right; 
   pivot = array[left];
 
   while(left < right){
@@ -48,8 +36,6 @@ void quickSort(int *array,int left,int right){
     quickSort(array, pivot + 1, right);
 }
 
-
-
 int main(int argc, char const *argv[]){
   int array[n], i, index[n];
   srand(time(NULL));
@@ -58,6 +44,7 @@ int main(int argc, char const *argv[]){
   for (i = 0; i < n; i++) {
     array[i] = rand() % k ;
     printf("%d ", array[i]);
+    index[i] = 0;
   }
   //сортировка массива
   quickSort(array,0,n-1);
