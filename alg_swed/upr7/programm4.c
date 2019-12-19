@@ -35,7 +35,6 @@ int main(int argc, char const *argv[]){
     printf("%d ", array[i]);
   }
   printf("\n\nМедианна массива: %d\n", array[n/2]);
-  scanf("%d",&i);
   return 0;
 
 

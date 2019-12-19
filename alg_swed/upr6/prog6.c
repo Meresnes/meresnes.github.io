@@ -11,7 +11,7 @@ int main(int argc, char const *argv[]) {
   printf("Массив А:\n");
   for (i = 0; i < n; i++) {
     array[i] = rand() % 20;
-    printf("%d\n", array[i]);
+    printf("%d ", array[i]);
   }
   /*Первоначальное значение максимального и минимального
   элемента - первый элемент массива*/

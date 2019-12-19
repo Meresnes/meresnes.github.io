@@ -75,6 +75,5 @@ int main(int argc, char const *argv[]){
   if (max_index == 1)
     printf("\nВ массиве нет повторяющихся элементов\n");
 
-  scanf("%d",&i);
   return 0;
 }
