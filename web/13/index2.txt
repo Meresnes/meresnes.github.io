@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>Удалить все i</title><meta charset="utf-8"><link rel="stylesheet" href="/css/board2"><style>article {background-color: #fff; padding: 15px;}</style>
+ </head>
+ <body>
+  <article>
+    <h1>HTML5 i</h1>
+    <p>элемент <i>1</i></p>
+    <div>элемент <i>2</i></div>
+    <ul><li>a</li><li>b <span> элемент <i>3</i></span></li></ul>
+    <h2>а это элемент <i>4</i></h2>
+  </article>
+  <pre class="task">
+    ЗАДАНИЕ
+
+    одной командой
+    удалите все элементы i из этого дерева
+
+  </pre>
+   <script>
+   document.querySelectorAll('i').forEach(each => each.remove())
+   </script>
+ </body>
+</html>
+

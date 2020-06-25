@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+ <head><script src="/j/out"></script><script src="/socket.io/socket.io.js"></script><!-- <script src="/j/barewebber"></script> -->
+   <title>Онлайн-занятие 13.11.2018</title><meta charset="utf-8"><meta name="author" content="Ilya Gosudarev"><link rel="stylesheet" href="/css/board2"><link rel="stylesheet" href="/css/highcss_atom">
+ </head>
+ <body>
+   <script src="/j/dblttl"></script> <script src="/high.js"></script> <script>hljs.initHighlightingOnLoad();</script>
+    <pre class="task">
+ 
+Последовательно создайте запросы:
+
+  https://kodaktor.ru/g/dom_parse
+                            <a target="_blank" href="https://kodaktor.ru/g/dom_parse">parse</a>
+
+1. К сервису https://kodaktor.ru/api/add/x/y
+который вычисляет сумму двух чисел x и y
+и результатом будет значение, которые мы обозначим здесь как a
+
+2. К сервису https://3336.kodaktor.ru/exponent
+методом POST который даёт значение, которые мы обозначим здесь как b
+
+3. К сервису http://kodaktor.ru/api2/f/a/b
+который вычисляет a в степени b
+
+Например
+https://kodaktor.ru/api/add/2/3
+http://kodaktor.ru/api2/f/5/4
+результат должен быть 625
+
+<script>
+const f = async (x, y, url) => {
+  const parser = new DOMParser();
+  const raw_res = await fetch(url + x + '/' + y).then(res => res.text());
+  a = parser.parseFromString(raw_res, 'text/html');
+  document
+  	.body
+    .innerHTML += a.querySelector('span').textContent;
+}
+
+let first = f(5, 10, 'https://kodaktor.ru/api/add/');
+
+const post_f = async (url) => {
+  const raw_res = await fetch(url, {method:'POST'}).then(res => res.text()).then(res => console.log(res));
+ // a = parser.parseFromString(raw_res, 'text/html');
+ // document
+ //   .body
+ //   .innerHTML += a.querySelector('span').textContent;
+}
+
+let second = post_f('https://3336.kodaktor.ru/exponent')
+
+const json_f = async (x, y, url) => {
+  const raw_res = await fetch(url + x + '/' + y).then(res => res.json()).then(res => res['result']);
+  console.log(raw_res);
+}
+
+
+
+let third = json_f(4, 5, 'https://kodaktor.ru/api2/f/')
+
+</script>
+
+
+   <script>{Array.from(document.querySelectorAll('pre code'),e=>e.parentNode.appendChild(document.createElement('script')).appendChild(document.createTextNode(e.textContent)));}</script>
+ </body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html> <head>
+  <script src="/socket.io/socket.io.js"></script>
+  <title>Онлайн-лекция 14.11.2019</title><meta charset="utf-8"><meta name="author" content="Ilya Gosudarev"><link rel="stylesheet" href="/css/board2"><script src="/j/clicker"></script><script src="/j/out"></script><style>td {border: 5px ridge }</style>
+ </head>
+ <body>
+  <script src="/j/dblttl"></script>
+  <pre class="task">
+    1. Функциональный подход к работе с DOM
+    2. Задание  
+     <a target="_blank" href="/g/dom_task">Задание по DOM</a> 
+    <hr>
+    Далее – клиентские шаблонизаторы
+  </pre> <script>{
+new Clicker(async () => {
+           
+const mime = 'text/html';
+const p = new DOMParser();
+const f = x => x.text();
+
+const doc = p.parseFromString(await fetch('/g/books_list').then(f), mime); 
+  
+const books = doc.querySelectorAll('book');
+
+const tb = document.body.appendChild(document.createElement('table'));
+  books.forEach(x => {
+  const title = x.querySelector('title').textContent;
+  const author = x.querySelector('author').textContent;
+  const year = x.querySelector('year').textContent;
+  const tabletr = tb
+  .appendChild(document.createElement('tr'))
+  
+  tabletr.appendChild(document.createElement('td'))
+  .appendChild(document.createTextNode(year))
+  
+  tabletr.appendChild(document.createElement('td'))
+  .appendChild(document.createElement('i'))
+  .appendChild(document.createTextNode(title))
+  
+  tabletr.appendChild(document.createElement('td'))
+  .appendChild(document.createTextNode(author))
+  
+
+  
+});  
+
+  
+  
+             
+}, caption='Щёлкни');  
+  
+}</script>
+
+ <table></table></body>
+</html>
+
+
+
+<!-- 
